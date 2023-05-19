@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
+import { RuleSetRule } from "webpack";
 
 const path = require("path");
 const toPath = (filePath) => path.join(process.cwd(), filePath);
@@ -20,6 +21,18 @@ const config: StorybookConfig = {
   },
   staticDirs: ["../public"],
   webpackFinal: async (config) => {
+    const assetRule =
+      (((config?.module?.rules as RuleSetRule[])?.find)(({ test }) =>
+        test?.test(".svg")
+      ) as RuleSetRule) || {};
+    const assetLoader = {
+      loader: assetRule?.loader,
+      options: assetRule?.options,
+    };
+    config?.module?.rules?.unshift({
+      test: /\.svg$/,
+      use: ["@svgr/webpack", assetLoader],
+    });
     return {
       ...config,
 

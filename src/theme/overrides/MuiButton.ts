@@ -14,6 +14,7 @@ const buttonStyleOverrides: Components["MuiButton"] = {
       color: theme.palette.text.primary,
       border: `4px solid ${theme.palette.primary.main}`,
       borderRadius: "4px",
+      transition: "all 0.2s ease-in-out",
       ":hover": {
         border: `4px solid ${theme.palette.primary.main}`,
         backgroundColor: theme.palette.hover.main,

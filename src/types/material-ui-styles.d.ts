@@ -4,10 +4,12 @@ import { PaletteColor, PaletteColorOptions } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface Palette {
     disabled: PaletteColor;
+    hover: PaletteColor;
   }
 
   interface PaletteOptions {
     disabled: PaletteColorOptions;
+    hover: PaletteColorOptions;
   }
 
   interface TypographyVariants {
@@ -27,6 +29,14 @@ declare module "@mui/material/styles" {
       caption: false;
       overline: false;
       inherit: false;
+    }
+  }
+
+  declare module "@mui/material/Button" {
+    interface ButtonPropsVariantOverrides {
+      primary: false;
+      outlined: true;
+      contained: false;
     }
   }
 }

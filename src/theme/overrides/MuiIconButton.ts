@@ -1,0 +1,38 @@
+import { Components } from "@mui/material/styles/components";
+
+import theme from "../basicTheme";
+
+const buttonStyleOverrides: Components["MuiIconButton"] = {
+  defaultProps: {
+    size: "medium",
+  },
+  styleOverrides: {
+    root: {
+      ":hover": {
+        backgroundColor: theme.palette.hover.main,
+      },
+      ":disabled": {
+        color: theme.palette.disabled.main,
+        cursor: "not-allowed",
+        pointerEvents: "auto",
+        ":hover": {
+          backgroundColor: "transparent",
+        },
+      },
+    },
+    sizeSmall: {
+      width: "44px",
+      height: "44px",
+    },
+    sizeMedium: {
+      width: "66px",
+      height: "66px",
+    },
+    sizeLarge: {
+      width: "88px",
+      height: "88px",
+    },
+  },
+};
+
+export default buttonStyleOverrides;

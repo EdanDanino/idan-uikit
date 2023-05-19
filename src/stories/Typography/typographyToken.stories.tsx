@@ -1,6 +1,8 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import MuiTypography, { MuiTypographyProps } from "@mui/material/Typography";
+import MuiTypography, {
+  TypographyProps as MuiTypographyProps,
+} from "@mui/material/Typography";
 
 import theme from "../../theme";
 import MuiBox from "@mui/material/Box";

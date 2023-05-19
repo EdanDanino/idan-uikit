@@ -15,6 +15,7 @@ const palette: PaletteOptions = {
   },
   disabled: { main: "#A9D9D080" },
   background: { default: "#0D0D0D" },
+  hover: { main: "#ffffff33" },
 };
 
 export default palette;

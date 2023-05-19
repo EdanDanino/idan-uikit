@@ -44,6 +44,16 @@ const typography: TypographyOptions = {
     fontStyle: "italic",
     fontWeight: 700,
   },
+  button2: {
+    fontSize: "19px",
+    fontStyle: "italic",
+    fontWeight: 700,
+  },
+  button3: {
+    fontSize: "14px",
+    fontStyle: "italic",
+    fontWeight: 700,
+  },
   caption: undefined,
   h3: undefined,
   h4: undefined,

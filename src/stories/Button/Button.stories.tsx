@@ -6,22 +6,22 @@ import { StoryDecorator } from "../Decorators";
 import { RenderArray } from "../Decorators/StoryDecorator";
 
 const STATES: RenderArray<ButtonProps>[] = [
-  { title: "Large Default", props: { children: "default" } },
-  { title: "Large Disabled", props: { disabled: true, children: "disabled" } },
+  { title: "Default", props: { children: "default" } },
+  { title: "Disabled", props: { disabled: true, children: "disabled" } },
   {
-    title: "Large With Start Icon",
+    title: "With Start Icon",
     props: { startIcon: <>❤</>, children: "With Start Icon" },
   },
   {
-    title: "Large With End Icon",
+    title: "With End Icon",
     props: { endIcon: <>❤</>, children: "With End Icon" },
   },
 ];
 
-const ButtonStory = () => {
+const ButtonStory = (args: ButtonProps) => {
   return (
     <StoryDecorator
-      Component={(props) => <Button {...props} />}
+      Component={(props) => <Button {...props} size={args.size} />}
       items={STATES}
     />
   );
@@ -36,4 +36,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LargeButtons: Story = {};
+export const LargeButtons: Story = {
+  args: {
+    size: "large",
+  },
+};
+export const MediumButtons: Story = {
+  args: {
+    size: "medium",
+  },
+};
+export const SmallButtons: Story = {
+  args: {
+    size: "small",
+  },
+};

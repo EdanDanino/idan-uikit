@@ -14,10 +14,14 @@ declare module "@mui/material/styles" {
 
   interface TypographyVariants {
     placeholder: React.CSSProperties;
+    button2: React.CSSProperties;
+    button3: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     placeholder?: React.CSSProperties;
+    button2: React.CSSProperties;
+    button3: React.CSSProperties;
   }
 
   declare module "@mui/material/Typography" {

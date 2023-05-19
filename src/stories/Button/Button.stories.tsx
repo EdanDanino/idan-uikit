@@ -6,14 +6,14 @@ import { StoryDecorator } from "../Decorators";
 import { RenderArray } from "../Decorators/StoryDecorator";
 
 const STATES: RenderArray<ButtonProps>[] = [
-  { title: "Default", props: { children: "default" } },
-  { title: "Disabled", props: { disabled: true, children: "disabled" } },
+  { title: "Large Default", props: { children: "default" } },
+  { title: "Large Disabled", props: { disabled: true, children: "disabled" } },
   {
-    title: "With Start Icon",
+    title: "Large With Start Icon",
     props: { startIcon: <>❤</>, children: "With Start Icon" },
   },
   {
-    title: "With End Icon",
+    title: "Large With End Icon",
     props: { endIcon: <>❤</>, children: "With End Icon" },
   },
 ];
@@ -36,4 +36,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Colors: Story = {};
+export const LargeButtons: Story = {};

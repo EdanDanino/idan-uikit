@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { alpha } from "@mui/material/styles";
 import { Components } from "@mui/material/styles/components";
 
 import theme from "../basicTheme";
@@ -9,13 +8,13 @@ const buttonStyleOverrides: Components["MuiButton"] = {
   defaultProps: {
     disableRipple: true,
     variant: "outlined",
+    size: "large",
   },
   styleOverrides: {
     root: {
       backgroundColor: "transparent",
       ...typography.button,
       color: theme.palette.text.primary,
-      padding: theme.spacing(4, 17),
       border: `4px solid ${theme.palette.primary.main}`,
       borderRadius: "4px",
       ":hover": {
@@ -32,6 +31,15 @@ const buttonStyleOverrides: Components["MuiButton"] = {
           backgroundColor: "transparent",
         },
       },
+    },
+    sizeLarge: {
+      padding: theme.spacing(4, 16),
+    },
+    sizeMedium: {
+      padding: theme.spacing(4, 10),
+    },
+    sizeSmall: {
+      padding: theme.spacing(4, 4),
     },
     startIcon: {
       marginRight: theme.spacing(4),

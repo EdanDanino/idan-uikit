@@ -4,17 +4,18 @@ import { Meta, StoryObj } from "@storybook/react";
 import Button, { ButtonProps } from "@mui/material/Button";
 import { StoryDecorator } from "../Decorators";
 import { RenderArray } from "../Decorators/StoryDecorator";
+import { ArrowRight } from "../../icons";
 
 const STATES: RenderArray<ButtonProps>[] = [
   { title: "Default", props: { children: "default" } },
   { title: "Disabled", props: { disabled: true, children: "disabled" } },
   {
     title: "With Start Icon",
-    props: { startIcon: <>❤</>, children: "With Start Icon" },
+    props: { startIcon: <ArrowRight />, children: "With Start Icon" },
   },
   {
     title: "With End Icon",
-    props: { endIcon: <>❤</>, children: "With End Icon" },
+    props: { endIcon: <ArrowRight />, children: "With End Icon" },
   },
 ];
 

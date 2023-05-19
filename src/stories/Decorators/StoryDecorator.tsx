@@ -40,10 +40,8 @@ const StoryDecorator = ({ Component, items }: StoryDecoratorProp) => (
   <Root>
     <Column>
       {items.map(({ title, props }) => (
-        <ItemContainer>
-          <MuiTypography key={title} variant="body1">
-            {title}
-          </MuiTypography>
+        <ItemContainer key={title}>
+          <MuiTypography variant="body1">{title}</MuiTypography>
           {React.cloneElement(<Component />, { ...props })}
         </ItemContainer>
       ))}

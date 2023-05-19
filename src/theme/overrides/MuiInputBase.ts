@@ -21,13 +21,18 @@ const inputStyleOverrides: Components["MuiInputBase"] = {
       "&.Mui-disabled": {
         color: theme.palette.disabled.main,
         border: `2px solid ${theme.palette.disabled.main}`,
-        cursor: "not-allowed",
-        pointerEvents: "auto",
+        ">*": {
+          cursor: "not-allowed",
+          pointerEvents: "auto",
+        },
         ":focus": {
           border: `2px solid ${theme.palette.disabled.main}`,
         },
         "input::-webkit-input-placeholder": {
           color: theme.palette.disabled.main,
+        },
+        ":hover": {
+          backgroundColor: "transparent",
         },
       },
       ":hover": {

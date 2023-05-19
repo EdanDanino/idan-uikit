@@ -1,4 +1,3 @@
-// import React from "react";
 import { PaletteColor, PaletteColorOptions } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {

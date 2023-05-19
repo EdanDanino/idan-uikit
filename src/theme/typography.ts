@@ -1,7 +1,7 @@
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 
 const typography: TypographyOptions = {
-  fontFamily: "Nunito",
+  fontFamily: "'Nunito sans'",
   h1: {
     fontSize: "65px",
     fontStyle: "italic",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Typography, { TypographyProps } from "@mui/material/Typography";
+import MuiTypography, { MuiTypographyProps } from "@mui/material/Typography";
 
 import theme from "../../theme";
 import MuiBox from "@mui/material/Box";
@@ -14,13 +14,13 @@ const VariantContainer = styled(MuiBox)`
   padding: ${({ theme }) => theme.spacing(1, 0)};
 `;
 
-const TypographiesStory = (args: TypographyProps) => (
+const TypographiesStory = (args: MuiTypographyProps) => (
   <>
     {variants.map((v) => (
       <VariantContainer key={v}>
-        <Typography {...args} variant={v as TypographyProps["variant"]}>
+        <MuiTypography {...args} variant={v as MuiTypographyProps["variant"]}>
           {v}
-        </Typography>
+        </MuiTypography>
       </VariantContainer>
     ))}
   </>
@@ -30,9 +30,9 @@ const meta = {
   title: "Token/Typography",
   component: TypographiesStory,
   argTypes: {},
-} satisfies Meta<typeof Typography>;
+} satisfies Meta;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const typographies: Story = {};
+export const Typography: Story = {};

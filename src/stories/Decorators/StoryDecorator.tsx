@@ -29,7 +29,7 @@ const Column = styled(MuiBox)`
 const ItemContainer = styled(MuiBox)`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   p {
     color: ${({ theme }) => theme.palette.primary.light};

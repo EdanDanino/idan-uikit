@@ -2,12 +2,13 @@ import { Components } from "@mui/material/styles/components";
 
 import theme from "../basicTheme";
 
-const buttonStyleOverrides: Components["MuiIconButton"] = {
+const iconButtonStyleOverrides: Components["MuiIconButton"] = {
   defaultProps: {
     size: "medium",
   },
   styleOverrides: {
     root: {
+      transition: "all 0.2s ease-in-out",
       ":hover": {
         backgroundColor: theme.palette.hover.main,
       },
@@ -35,4 +36,4 @@ const buttonStyleOverrides: Components["MuiIconButton"] = {
   },
 };
 
-export default buttonStyleOverrides;
+export default iconButtonStyleOverrides;

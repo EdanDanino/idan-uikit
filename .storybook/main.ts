@@ -21,21 +21,12 @@ const config: StorybookConfig = {
   },
   staticDirs: ["../public"],
   webpackFinal: async (config) => {
-    const assetRule =
-      (((config?.module?.rules as RuleSetRule[])?.find)(({ test }) =>
-        test?.test(".svg")
-      ) as RuleSetRule) || {};
-    const assetLoader = {
-      loader: assetRule?.loader,
-      options: assetRule?.options,
-    };
-    config?.module?.rules?.unshift({
+    config?.module?.rules?.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack", assetLoader],
+      use: ["@svgr/webpack"],
     });
     return {
       ...config,
-
       resolve: {
         ...config.resolve,
         alias: {

@@ -64,6 +64,7 @@
     "@storybook/react": "^7.0.9",
     "@storybook/react-webpack5": "^7.0.9",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/webpack-env": "^1.18.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.9",

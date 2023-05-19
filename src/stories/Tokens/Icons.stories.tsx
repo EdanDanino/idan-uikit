@@ -5,7 +5,7 @@ import MuiBox from "@mui/material/Box";
 import MuiTypography from "@mui/material/Typography";
 
 import { styled } from "@mui/material/styles";
-// import * as icons from "../../icons";
+import useIconDynamicImport from "../../hooks/useIconDynamicImport";
 
 const Root = styled(MuiBox)`
   display: flex;
@@ -33,18 +33,20 @@ const Label = styled(MuiTypography)`
 `;
 
 const IconsStory = () => {
-  // console.log(icons);
+  const icons = useIconDynamicImport();
+
+  console.log(icons);
 
   return (
     <Root>
-      {/* {icons.map((a) => {
+      {icons.map((ReactComponent) => {
         return ReactComponent ? (
-          <IconWrapper key={name}>
+          <IconWrapper key={ReactComponent.name}>
             {React.cloneElement(<ReactComponent />, { width: 20, height: 20 })}
-            <Label>{/([A-Z])\w+/g.exec(name)?.[0]}</Label>
+            <Label>{/([A-Z])\w+/g.exec(ReactComponent.name)?.[0]}</Label>
           </IconWrapper>
         ) : null;
-      })} */}
+      })}
     </Root>
   );
 };

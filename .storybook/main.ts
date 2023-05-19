@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
+import { RuleSetRule } from "webpack";
 
 const path = require("path");
 const toPath = (filePath) => path.join(process.cwd(), filePath);
@@ -20,9 +21,12 @@ const config: StorybookConfig = {
   },
   staticDirs: ["../public"],
   webpackFinal: async (config) => {
+    config?.module?.rules?.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
     return {
       ...config,
-
       resolve: {
         ...config.resolve,
         alias: {

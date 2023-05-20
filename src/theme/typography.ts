@@ -6,13 +6,17 @@ const typography: TypographyOptions = {
     fontSize: "65px",
     fontStyle: "italic",
     fontWeight: 700,
-    letterSpacing: "0em",
   },
   h2: {
     fontSize: "45px",
     fontStyle: "italic",
     fontWeight: 600,
-    letterSpacing: "0em",
+    textDecorationLine: "underline",
+  },
+  h3: {
+    fontSize: "35px",
+    fontStyle: "italic",
+    fontWeight: 500,
   },
   body1: {
     fontSize: "30px",
@@ -54,12 +58,16 @@ const typography: TypographyOptions = {
     fontStyle: "italic",
     fontWeight: 700,
   },
+  overline: {
+    fontSize: "25px",
+    fontStyle: "italic",
+    fontWeight: 500,
+    textDecorationLine: "underline",
+  },
   caption: undefined,
-  h3: undefined,
   h4: undefined,
   h5: undefined,
   h6: undefined,
-  overline: undefined,
 };
 
 export default typography;

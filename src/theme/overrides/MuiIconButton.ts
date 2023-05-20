@@ -16,6 +16,7 @@ const iconButtonStyleOverrides: Components["MuiIconButton"] = {
         color: theme.palette.disabled.main,
         cursor: "not-allowed",
         pointerEvents: "auto",
+        opacity: 0.5,
         ":hover": {
           backgroundColor: "transparent",
         },

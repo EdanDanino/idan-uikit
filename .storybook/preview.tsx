@@ -19,6 +19,11 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    options: {
+      storySort: {
+        order: ["Token", "Components"],
+      },
+    },
   },
   decorators: [withMuiTheme],
 };

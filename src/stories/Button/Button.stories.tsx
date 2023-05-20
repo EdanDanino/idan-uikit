@@ -2,8 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import Button, { ButtonProps } from "@mui/material/Button";
-import { StoryDecorator } from "../Decorators";
-import { RenderArray } from "../Decorators/StoryDecorator";
+import { StoryDecorator, RenderArray } from "../../decorators";
 import { ArrowRight } from "../../icons";
 
 const STATES: RenderArray<ButtonProps>[] = [

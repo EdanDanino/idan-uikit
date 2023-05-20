@@ -25,12 +25,10 @@ declare module "@mui/material/styles" {
 
   declare module "@mui/material/Typography" {
     interface TypographyPropsVariantOverrides {
-      h3: false;
       h4: false;
       h5: false;
       h6: false;
       caption: false;
-      overline: false;
       inherit: false;
     }
   }

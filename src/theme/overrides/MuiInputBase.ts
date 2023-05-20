@@ -17,6 +17,7 @@ const inputStyleOverrides: Components["MuiInputBase"] = {
       "input::-webkit-input-placeholder": {
         color: theme.palette.text.primary,
         padding: theme.spacing(4, 6),
+        opacity: 1,
       },
       "&.Mui-disabled": {
         color: theme.palette.disabled.main,
@@ -30,6 +31,7 @@ const inputStyleOverrides: Components["MuiInputBase"] = {
         },
         "input::-webkit-input-placeholder": {
           color: theme.palette.disabled.main,
+          opacity: 1,
         },
         ":hover": {
           backgroundColor: "transparent",

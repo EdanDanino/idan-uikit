@@ -4,10 +4,11 @@ import { Meta, StoryObj } from "@storybook/react";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import { StoryDecorator } from "../Decorators";
 import { RenderArray } from "../Decorators/StoryDecorator";
+import { Jest } from "../../icons";
 
 const STATES: RenderArray<IconButtonProps>[] = [
-  { title: "Default", props: { children: "❤" } },
-  { title: "Disabled", props: { disabled: true, children: "❤" } },
+  { title: "Default", props: { children: <Jest /> } },
+  { title: "Disabled", props: { disabled: true, children: <Jest /> } },
 ];
 
 const IconButtonStory = (args: IconButtonProps) => {

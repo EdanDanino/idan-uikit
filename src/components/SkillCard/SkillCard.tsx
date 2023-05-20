@@ -1,8 +1,7 @@
+import React, { ReactNode } from "react";
 import { styled } from "@mui/material";
 import MuiBox from "@mui/material/Box";
 import MuiTypography from "@mui/material/Typography";
-
-import React, { ReactNode } from "react";
 
 const Root = styled(MuiBox)`
   display: flex;
@@ -19,7 +18,8 @@ const Title = styled(MuiTypography)`
 `;
 const Description = styled(MuiTypography)`
   max-height: 180px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: none;
 `;
 const LearnMore = styled(MuiTypography)`
   margin: auto;

@@ -2,8 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
-import { StoryDecorator } from "../Decorators";
-import { RenderArray } from "../Decorators/StoryDecorator";
+import { StoryDecorator, RenderArray } from "../../decorators";
 import { Jest } from "../../icons";
 
 const STATES: RenderArray<IconButtonProps>[] = [

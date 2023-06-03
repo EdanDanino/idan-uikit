@@ -4,7 +4,7 @@ import MuiTypography, {
   TypographyProps as MuiTypographyProps,
 } from "@mui/material/Typography";
 
-import theme from "../../theme";
+import theme from "../../shared/theme";
 import MuiBox from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 

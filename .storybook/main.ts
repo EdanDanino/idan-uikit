@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
-import { RuleSetRule } from "webpack";
+/// <reference types="react-scripts" />
 
 const path = require("path");
 const toPath = (filePath) => path.join(process.cwd(), filePath);

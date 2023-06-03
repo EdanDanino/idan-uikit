@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles";
 import flat from "flat";
 
 //TODO change to absloute path
-import palette from "../../theme/palette";
+import palette from "../../shared/theme/palette";
 import MuiTypography from "@mui/material/Typography";
 
 const ColorListItem = styled(MuiBox)`

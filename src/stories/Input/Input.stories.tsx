@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 
 import Input, { InputBaseProps } from "@mui/material/InputBase";
-import { StoryDecorator, RenderArray } from "../../decorators";
+import { StoryDecorator, RenderArray } from "../../shared/decorators";
 
 const STATES: RenderArray<InputBaseProps>[] = [
   { title: "Default" },

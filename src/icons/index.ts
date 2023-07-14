@@ -8,3 +8,4 @@ export { ReactComponent as StyledComponents } from "./StyledComponents.svg";
 export { ReactComponent as TypeScript } from "./TypeScript.svg";
 export { ReactComponent as Cypress } from "./Cypress.svg";
 export { ReactComponent as Logo } from "./Logo.svg";
+export { ReactComponent as Top } from "./Top.svg";

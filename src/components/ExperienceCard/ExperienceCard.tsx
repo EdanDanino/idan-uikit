@@ -1,14 +1,19 @@
-import React, { ReactNode, useMemo } from "react";
+import React, { useMemo } from "react";
 import MuiBox from "@mui/material/Box";
 import { alpha, styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Button, { ButtonProps } from "@mui/material/Button";
 
+type FooterButton = Pick<
+  ButtonProps,
+  "onClick" | "children" | "startIcon" | "endIcon"
+>;
 export interface ExperienceCardProps {
   title: React.ReactNode;
   body: React.ReactNode;
   years?: string;
-  withButton?: boolean;
-  skills: ReactNode;
+  footerButton?: FooterButton;
+  skills: React.ReactNode;
 }
 
 const Root = styled(MuiBox)`
@@ -32,17 +37,24 @@ const Header = styled(MuiBox)`
 `;
 const Body = styled(MuiBox)`
   display: flex;
-  margin: ${({ theme }) => theme.spacing(24, 0, 5, 0)};
+  margin: ${({ theme }) => theme.spacing(24, 0, "auto", 0)};
   justify-content: center;
   overflow: auto;
   text-align: center;
+  max-height: 249px;
   > * {
     max-height: 290px;
   }
 `;
 const Footer = styled(MuiBox)`
   display: flex;
-  margin-bottom: ${({ theme }) => theme.spacing(10)};
+  justify-content: space-between;
+  height: 85px;
+  align-items: center;
+`;
+const IconsContainer = styled(MuiBox)`
+  display: flex;
+  gap: 14px;
 `;
 
 const ExperienceCard = ({
@@ -50,6 +62,7 @@ const ExperienceCard = ({
   title,
   years,
   skills,
+  footerButton,
 }: ExperienceCardProps) => {
   const handledTitle = useMemo(
     () =>
@@ -78,7 +91,10 @@ const ExperienceCard = ({
         <MuiBox>{years}</MuiBox>
       </Header>
       <Body>{handledBody}</Body>
-      <Footer>{skills}</Footer>
+      <Footer>
+        <IconsContainer>{skills}</IconsContainer>
+        {footerButton && <Button {...footerButton} />}
+      </Footer>
     </Root>
   );
 };

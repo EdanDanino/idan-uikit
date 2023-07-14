@@ -24,7 +24,6 @@ const InputStory = (args: InputBaseProps) => {
 const meta = {
   title: "Components/Input",
   component: InputStory,
-  argTypes: {},
 } satisfies Meta;
 
 export default meta;

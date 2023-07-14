@@ -18,7 +18,6 @@ const SkillCardStory = (args: SkillCardProps) => (
 const meta = {
   title: "Components/SkillCard",
   component: SkillCardStory,
-  argTypes: {},
 } satisfies Meta;
 
 export default meta;

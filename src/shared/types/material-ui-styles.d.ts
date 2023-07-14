@@ -12,20 +12,34 @@ declare module "@mui/material/styles" {
     hover: PaletteColorOptions;
     shadow: PaletteColorOptions;
   }
-
   interface TypographyVariants {
-    placeholder: React.CSSProperties;
+    placeholder?: React.CSSProperties;
     button2: React.CSSProperties;
     button3: React.CSSProperties;
+    link: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     placeholder?: React.CSSProperties;
     button2: React.CSSProperties;
     button3: React.CSSProperties;
+    link: React.CSSProperties;
   }
 
   declare module "@mui/material/Typography" {
+    interface TypographyVariants {
+      placeholder?: React.CSSProperties;
+      button2: React.CSSProperties;
+      button3: React.CSSProperties;
+      link: React.CSSProperties;
+    }
+
+    interface TypographyVariantsOptions {
+      placeholder?: React.CSSProperties;
+      button2: React.CSSProperties;
+      button3: React.CSSProperties;
+      link: React.CSSProperties;
+    }
     interface TypographyPropsVariantOverrides {
       h4: false;
       h5: false;

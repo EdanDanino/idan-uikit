@@ -8,7 +8,7 @@ const Root = styled(MuiBox)`
   width: 1080px;
   height: 205px;
   margin: 0 80px 30px 80px;
-  gap: 100px;
+  gap: ${({ theme }) => theme.spacing(25)};
   align-items: center;
 `;
 
@@ -23,7 +23,7 @@ const Divider = styled(MuiBox)`
 const LeftSide = styled(MuiBox)`
   display: flex;
   width: 100%;
-  gap: 30px;
+  gap: ${({ theme }) => theme.spacing(7.5)};
   align-items: center;
   h1 {
     font-size: 150px;
@@ -35,7 +35,7 @@ const RightSide = styled(MuiBox)`
   display: flex;
   align-self: end;
   width: 100%;
-  margin-bottom: 44px;
+  margin-bottom: ${({ theme }) => theme.spacing(11)};
 `;
 
 export type SectionTitleProps = {

@@ -64,6 +64,11 @@ const typography: TypographyOptions = {
     fontWeight: 500,
     textDecorationLine: "underline",
   },
+  link: {
+    fontSize: "35px",
+    fontStyle: "italic",
+    fontWeight: 800,
+  },
   caption: undefined,
   h4: undefined,
   h5: undefined,

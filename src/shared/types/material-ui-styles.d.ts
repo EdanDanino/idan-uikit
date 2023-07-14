@@ -4,11 +4,13 @@ declare module "@mui/material/styles" {
   interface Palette {
     disabled: PaletteColor;
     hover: PaletteColor;
+    shadow: PaletteColor;
   }
 
   interface PaletteOptions {
     disabled: PaletteColorOptions;
     hover: PaletteColorOptions;
+    shadow: PaletteColorOptions;
   }
 
   interface TypographyVariants {

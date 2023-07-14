@@ -1,16 +1,14 @@
-import React, { useMemo } from "react";
+import React, { ReactNode, useMemo } from "react";
 import MuiBox from "@mui/material/Box";
 import { alpha, styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
-import { IconOptions } from "../../shared/types";
-import { useDynamicImportIcon } from "../../shared/hooks";
 
 export interface ExperienceCardProps {
   title: React.ReactNode;
   body: React.ReactNode;
   years?: string;
   withButton?: boolean;
-  skills: IconOptions[];
+  skills: ReactNode;
 }
 
 const Root = styled(MuiBox)`
@@ -18,14 +16,15 @@ const Root = styled(MuiBox)`
   width: 1080px;
   height: 680px;
   border-radius: 3px;
-  box-shadow: -6px -6px 4px rgba(242, 231, 220, 0.3),
-    5px 6px 8px rgba(242, 231, 220, 0.3);
+  box-shadow: -6px -6px 4px ${({ theme }) => theme.palette.shadow.main},
+    5px 6px 8px ${({ theme }) => theme.palette.shadow.main};
   border: 6px solid ${({ theme }) => theme.palette.primary.dark};
   background-color: ${({ theme }) => alpha(theme.palette.primary.light, 0.2)};
   color: ${({ theme }) => theme.palette.text.primary};
   padding: ${({ theme }) => theme.spacing(11.5, 8)};
   flex-direction: column;
 `;
+
 const Header = styled(MuiBox)`
   display: flex;
   width: 100%;
@@ -52,10 +51,6 @@ const ExperienceCard = ({
   years,
   skills,
 }: ExperienceCardProps) => {
-  const importedIcons = useDynamicImportIcon({ iconsNames: skills });
-
-  console.log(importedIcons);
-
   const handledTitle = useMemo(
     () =>
       typeof title === "string" ? (

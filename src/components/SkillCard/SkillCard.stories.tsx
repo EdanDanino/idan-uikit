@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { TypeScript } from "../../icons";
 import { CenteredStory } from "../../shared/decorators";
-import { SkillCard, SkillCardProps } from "../../components/SkillCard";
+import { SkillCard, SkillCardProps } from ".";
 
 const SkillCardStory = (args: SkillCardProps) => (
   <CenteredStory>

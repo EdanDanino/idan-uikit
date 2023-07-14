@@ -5,15 +5,13 @@ type useDyanmicImportIconProps = {
   iconsNames: IconOptions[];
 };
 
-const ICONS_PATH = "../../icons";
-
 const useDyanmicImportIcon = ({ iconsNames }: useDyanmicImportIconProps) => {
   const [components, setComponents] = useState<ReactNode[]>([]);
 
   useEffect(() => {
     iconsNames.forEach(async (name) =>
-      import(`${ICONS_PATH}/${name as string}.svg`).then((module) => {
-        setComponents((prevState) => [...prevState, module.default]);
+      import(`../../icons/${name as string}.svg`).then((module) => {
+        setComponents((prevState) => [...prevState, module.ReactComponent]);
       })
     );
   }, [iconsNames]);

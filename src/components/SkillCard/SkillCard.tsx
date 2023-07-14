@@ -18,6 +18,7 @@ const Title = styled(MuiTypography)`
 `;
 const Description = styled(MuiTypography)`
   max-height: 180px;
+  text-align: center;
   overflow-y: auto;
   overflow-x: none;
 `;

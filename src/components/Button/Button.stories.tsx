@@ -30,7 +30,6 @@ const ButtonStory = (args: ButtonProps) => {
 const meta = {
   title: "Components/Button",
   component: ButtonStory,
-  argTypes: {},
 } satisfies Meta;
 
 export default meta;

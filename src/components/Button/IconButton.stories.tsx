@@ -22,7 +22,6 @@ const IconButtonStory = (args: IconButtonProps) => {
 const meta = {
   title: "Components/IconButton",
   component: IconButtonStory,
-  argTypes: {},
 } satisfies Meta;
 
 export default meta;

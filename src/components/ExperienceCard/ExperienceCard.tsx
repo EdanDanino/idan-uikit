@@ -43,7 +43,7 @@ const Body = styled(MuiBox)`
   text-align: center;
   max-height: 249px;
   > * {
-    max-height: 290px;
+    max-height: 249px;
   }
 `;
 const Footer = styled(MuiBox)`
@@ -54,7 +54,7 @@ const Footer = styled(MuiBox)`
 `;
 const IconsContainer = styled(MuiBox)`
   display: flex;
-  gap: 14px;
+  gap: ${({ theme }) => theme.spacing(3.5)};
 `;
 
 const ExperienceCard = ({

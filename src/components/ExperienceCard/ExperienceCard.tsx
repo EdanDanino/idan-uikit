@@ -1,7 +1,8 @@
 import React, { useMemo } from "react";
 import MuiBox from "@mui/material/Box";
 import { alpha, styled } from "@mui/material/styles";
-import { Typography, ButtonProps, Button } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Button, { ButtonProps } from "@mui/material/Button";
 
 type FooterButton = Pick<
   ButtonProps,
